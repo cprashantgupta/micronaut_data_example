@@ -1,0 +1,26 @@
+micronaut:
+  application:
+    name: dataexample
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+datasources:
+  default:
+    driver-class-name: org.postgresql.Driver
+    db-type: postgres
+    dialect: POSTGRES
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+
+jpa:
+  default:
+    package-to-scan:
+      - com.prashant
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: create-drop
+        show_sql: true
